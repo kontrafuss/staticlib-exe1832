@@ -6,9 +6,5 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
-Foo::Foo()
-: Bar {}
-{
-}
-
+Foo::Foo() = default;
 Foo::~Foo() = default;

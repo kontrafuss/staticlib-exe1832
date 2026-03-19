@@ -6,9 +6,6 @@
         <Projects Include="MyLib\MyLib.cbproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="AnotherLib\AnotherLib.cbproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="MyPackage\MyPackage.cbproj">
             <Dependencies/>
         </Projects>
@@ -29,15 +26,6 @@
     <Target Name="MyLib:Make">
         <MSBuild Projects="MyLib\MyLib.cbproj" Targets="Make"/>
     </Target>
-    <Target Name="AnotherLib">
-        <MSBuild Projects="AnotherLib\AnotherLib.cbproj"/>
-    </Target>
-    <Target Name="AnotherLib:Clean">
-        <MSBuild Projects="AnotherLib\AnotherLib.cbproj" Targets="Clean"/>
-    </Target>
-    <Target Name="AnotherLib:Make">
-        <MSBuild Projects="AnotherLib\AnotherLib.cbproj" Targets="Make"/>
-    </Target>
     <Target Name="MyPackage">
         <MSBuild Projects="MyPackage\MyPackage.cbproj"/>
     </Target>
@@ -48,13 +36,13 @@
         <MSBuild Projects="MyPackage\MyPackage.cbproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="MyLib;AnotherLib;MyPackage"/>
+        <CallTarget Targets="MyLib;MyPackage"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="MyLib:Clean;AnotherLib:Clean;MyPackage:Clean"/>
+        <CallTarget Targets="MyLib:Clean;MyPackage:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="MyLib:Make;AnotherLib:Make;MyPackage:Make"/>
+        <CallTarget Targets="MyLib:Make;MyPackage:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

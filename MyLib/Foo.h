@@ -4,13 +4,17 @@
 //---------------------------------------------------------------------------
 
 #include "MyLib.h"
-#include "Bar.h"
 
-class __declspec(package) Foo : public Bar
+#include <set>
+
+class __declspec(package) Foo
 {
 public:
     Foo();
-    ~Foo() override;
+    ~Foo();
+
+private:
+    std::set<int> bar;
 };
 
 #endif

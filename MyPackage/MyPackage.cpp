@@ -11,11 +11,9 @@
 #if defined(__BORLANDC__) && defined(_WIN64) && defined(__MINGW64__)
 // BCC64X
 #pragma link "MyLib.lib"
-#pragma link "AnotherLib.lib"
 #elif defined(__BORLANDC__) && defined(__clang__) && defined(_WIN64)
 // BCC64
 #pragma link "MyLib.a"
-#pragma link "AnotherLib.a"
 #else
 #error Unsupported platform
 #endif
