@@ -5,6 +5,7 @@
 
 #include "MyLib.h"
 
+// FIXME: remove the following line
 #include <set>
 
 class __declspec(package) Foo
@@ -12,9 +13,6 @@ class __declspec(package) Foo
 public:
     Foo();
     ~Foo();
-
-private:
-    std::set<int> bar;
 };
 
 #endif
