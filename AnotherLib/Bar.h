@@ -13,6 +13,7 @@ public:
     virtual ~Bar() = default;
 
 private:
+    // FIXME: remove the following line
     std::set<int> numbers;
 };
 
