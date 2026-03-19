@@ -2,8 +2,8 @@
 
 **Instructions**
 
-1. Open this project group with C++ Builder 12
-2. Compile using Platform Win64
+1. Open this project group with C++ Builder 13 or 12
+2. Compile All using Platform Win64
 
 **Observed result**
 
